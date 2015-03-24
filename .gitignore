@@ -1,0 +1,15 @@
+# OSX litter
+.DS_*
+
+# caches
+/.gradle
+
+# idea config
+.idea
+*.iml
+
+# generated files
+/build
+
+# Local configuration file (sdk path, etc)
+local.properties

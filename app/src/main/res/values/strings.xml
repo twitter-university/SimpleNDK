@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NDK</string>
+
+    <string name="label_plus">+</string>
+    <string name="label_equals">=</string>
+    <string name="compute">Compute</string>
+
+</resources>

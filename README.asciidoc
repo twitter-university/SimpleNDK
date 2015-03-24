@@ -1,0 +1,6 @@
+= Simple NDK
+
+This is a repository of a simple Android application, used as a basis
+for a lab on Android Native Development Kit (NDK).
+
+

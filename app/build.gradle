@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.twitter.university.android.ndk"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            moduleName "addLib"
+
+            // abiFilters "x86", "armeabi"
+            // cFlags "-DANDROID_NDK -D_DEBUG DNULL=0"
+            //ldLibs "EGL", "GLESv3", "dl", "log"
+            // stl "stlport_shared"
+        }
+    }
+
+//    sourceSets.main {
+//        // jniLibs.srcDir 'libs';
+//        // jni.srcDirs = ['src/main/jni'];
+//    }
+//
+//    productFlavors {
+//        fat
+//        arm {
+//            versionCode 400000 + defaultConfig.versionCode
+//            ndk { abiFilter "armeabi" }
+//        }
+//        armv7 {
+//            versionCode 200000 + defaultConfig.versionCode
+//            ndk { abiFilter "armeabi-v7a" }
+//        }
+//        x86 {
+//            versionCode 100000 + defaultConfig.versionCode
+//            ndk { abiFilter "x86" }
+//        }
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            ndk { cFlags "-DDEBUG" }
+        }
+    }
+}
